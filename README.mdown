@@ -2,6 +2,4 @@ CKReflectionImage
 ============
 This example shows to create a custom component to display an image with its reflection.
 
-![](http://cocoakit.com/wp-content/uploads/2011/11/CKReflectioImage-mini.png)
-
-Website: [http://cocoakit.com](http://cocoakit.com)
+![](https://raw.github.com/ipalmer/CKReflectioImage/master/CKReflectioImage.png)
