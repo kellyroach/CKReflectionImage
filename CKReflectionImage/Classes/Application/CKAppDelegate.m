@@ -19,23 +19,6 @@
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 
-#pragma mark - Memory management
-
-/**
- * Deallocates the memory occupied by the receiver.
- */
-- (void)dealloc {
-    
-    [_window release];
-    _window = nil;
-    
-    [_viewController release];
-    _viewController = nil;
-    
-    [super dealloc];
-    
-}
-
 #pragma mark - Application methods
 
 /**
@@ -47,7 +30,7 @@
  */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [self setWindow:[[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease]];
+    [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
     
     [self setViewController:[CKViewController ckViewController]];
     

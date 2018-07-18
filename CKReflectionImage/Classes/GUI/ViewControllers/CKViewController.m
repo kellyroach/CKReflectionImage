@@ -19,20 +19,6 @@
 
 @implementation CKViewController
 
-#pragma mark - Memory management
-
-/**
- * Deallocates the memory occupied by the receiver.
- */
-- (void)dealloc {
-    
-    [reflectionImage release];
-    reflectionImage = nil;
-    
-    [super dealloc];
-    
-}
-
 #pragma mark - View lifecycle
 
 /**
@@ -57,15 +43,6 @@
     
 }
 
-/**
- * Called when the controller’s view is released from memory.
- */
-- (void)viewDidUnload {
-    
-    [super viewDidUnload];
-    
-}
-
 #pragma mark - Instances initialization
 
 /*
@@ -73,7 +50,7 @@
  */
 + (CKViewController *)ckViewController {
   
-    return [[[CKViewController alloc] initWithNibName:NIB_FILE_NAME bundle:nil] autorelease];
+    return [[CKViewController alloc] initWithNibName:NIB_FILE_NAME bundle:nil];
     
 }
 

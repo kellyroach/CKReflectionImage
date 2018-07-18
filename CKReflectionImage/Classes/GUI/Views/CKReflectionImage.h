@@ -24,17 +24,17 @@
     /**
      * Image to draw.
      */
-    UIImage *image_;
+    UIImage *_image;
     
     /**
      * Value of gradient start. This value is divided to height of image.
      */
-    CGFloat visibleReflectionHeight_;
+    CGFloat _visibleReflectionHeight;
     
     /**
      * Padding to top image.
      */
-    CGFloat paddingToTopImage_;
+    CGFloat _paddingToTopImage;
     
 }
 

@@ -13,32 +13,6 @@
 @implementation CKReflectionImage
 
 #pragma mark -
-#pragma mark Properties
-
-@synthesize image = image_;
-@synthesize visibleReflectionHeight = visibleReflectionHeight_;
-@synthesize paddingToTopImage = paddingToTopImage_;
-
-#pragma mark -
-#pragma mark Memory management
-
-/**
- * Deallocates the memory occupied by the receiver.
- */
-- (void)dealloc {
-    
-    [image_ release];
-    image_ = nil;
-    
-    visibleReflectionHeight_ = 0.0f;
-    
-    paddingToTopImage_ = 0.0f;
-    
-    [super dealloc];
-    
-}
-
-#pragma mark -
 #pragma mark Draw methods
 
 /**
@@ -50,7 +24,7 @@
     
     [super drawRect:rect];
     
-    if (image_ != nil) {
+    if (_image != nil) {
         
         // Get current context to draw.
         CGContextRef context = UIGraphicsGetCurrentContext();
@@ -64,20 +38,20 @@
         frame.origin.x = 0.0f;
         frame.origin.y = 0.0f;
         frame.size.width = CGRectGetWidth(frame);
-        frame.size.height = image_.size.height * CGRectGetWidth(frame) / image_.size.width;
+        frame.size.height = _image.size.height * CGRectGetWidth(frame) / _image.size.width;
         
         // Draw initial image in context
         CGContextSaveGState(context);
         {
             
             // Draw image in context, commented but the image show in reverse.
-//            CGContextDrawImage(context, frame, [image_ CGImage]);
+//            CGContextDrawImage(context, frame, [_image CGImage]);
             
             // Push context to draw image.
             UIGraphicsPushContext(context);
             
             // Draw original image in top
-            [image_ drawInRect:frame];
+            [_image drawInRect:frame];
             
             // Pop to context
             UIGraphicsPopContext();
@@ -106,8 +80,8 @@
             CGColorSpaceRelease(colorSpace);
             
             // Create the start and end points for the gradient vector (straight down).
-            CGPoint gradientStartPoint = CGPointMake(0, (CGRectGetHeight(frame) - visibleReflectionHeight_));
-            CGPoint gradientEndPoint = CGPointMake(0, ((CGRectGetHeight(frame) * 2) - visibleReflectionHeight_));
+            CGPoint gradientStartPoint = CGPointMake(0, (CGRectGetHeight(frame) - _visibleReflectionHeight));
+            CGPoint gradientEndPoint = CGPointMake(0, ((CGRectGetHeight(frame) * 2) - _visibleReflectionHeight));
             
             // Draw gradient into gradient context.
             CGContextDrawLinearGradient(gradientContext, grayScaleGradient, gradientStartPoint, gradientEndPoint, kCGGradientDrawsAfterEndLocation);
@@ -155,7 +129,7 @@
                 UIGraphicsPushContext(reflectionContext);
                 
                 // Draw original image in top
-                [image_ drawInRect:frame];
+                [_image drawInRect:frame];
                 
                 // Pop to context
                 UIGraphicsPopContext();
@@ -180,7 +154,7 @@
         {
             
             // Translate context matrix to height * 2 but next scale and sum 1.0f of image and padding.
-            CGContextTranslateCTM(context, CGRectGetMinX(frame), (CGRectGetHeight(frame) * 2) + paddingToTopImage_);
+            CGContextTranslateCTM(context, CGRectGetMinX(frame), (CGRectGetHeight(frame) * 2) + _paddingToTopImage);
             
             // Flip vertical image in context.
             CGContextScaleCTM(context, 1.0f, -1.0f);
@@ -204,16 +178,8 @@
  * @param image: Another image to set.
  */
 - (void)setImage:(UIImage *)image {
-    
-    if (image_ != image) {
-        
-        [image_ release];
-        image_ = [image retain];
-        
-    }
-    
+    _image = image;
     [self setNeedsDisplay];
-    
 }
 
 /**
@@ -223,9 +189,9 @@
  */
 - (void)setVisibleReflectionHeight:(CGFloat)visibleReflectioHeight {
     
-    if (visibleReflectionHeight_ != visibleReflectioHeight) {
+    if (_visibleReflectionHeight != visibleReflectioHeight) {
         
-        visibleReflectionHeight_ = visibleReflectioHeight;
+        _visibleReflectionHeight = visibleReflectioHeight;
         
     }
     
@@ -240,9 +206,9 @@
  */
 - (void)setPaddingToTopImage:(CGFloat)paddingToTopImage {
     
-    if (paddingToTopImage_ != paddingToTopImage) {
+    if (_paddingToTopImage != paddingToTopImage) {
         
-        paddingToTopImage_ = paddingToTopImage;
+        _paddingToTopImage = paddingToTopImage;
         
     }
     
