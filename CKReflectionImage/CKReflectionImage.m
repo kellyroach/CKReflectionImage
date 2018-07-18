@@ -18,7 +18,7 @@
 /**
  * Draws the receiver’s image within the passed-in rectangle.
  * 
- * @param rect: The portion of the view’s bounds that needs to be updated.
+ * @param rect The portion of the view’s bounds that needs to be updated.
  */
 - (void)drawRect:(CGRect)rect {
     
@@ -175,7 +175,7 @@
 /**
  * Set current image to another image.
  *
- * @param image: Another image to set.
+ * @param image Another image to set.
  */
 - (void)setImage:(UIImage *)image {
     _image = image;
@@ -185,7 +185,7 @@
 /**
  * Set current visibleReflectioHeight_ value to another.
  *
- * @param gradientStart: Another value to visible reflectio height variable.
+ * @param visibleReflectioHeight Another value to visible reflectio height variable.
  */
 - (void)setVisibleReflectionHeight:(CGFloat)visibleReflectioHeight {
     
@@ -202,7 +202,7 @@
 /**
  * Set current paddingToTopImage variable to another value.
  *
- * @param paddingToTopImage: Another value to padding to top image.
+ * @param paddingToTopImage Another value to padding to top image.
  */
 - (void)setPaddingToTopImage:(CGFloat)paddingToTopImage {
     

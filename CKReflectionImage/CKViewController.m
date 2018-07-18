@@ -12,10 +12,13 @@
 
 #import "CKReflectionImage.h"
 
-/**
- * Defines a NIB file name.
- */
-#define NIB_FILE_NAME                                               @"CKViewController"
+@interface CKViewController() {
+    /**
+     * A reflection image example.
+     */
+    __weak IBOutlet CKReflectionImage *reflectionImage;
+}
+@end
 
 @implementation CKViewController
 
@@ -28,8 +31,6 @@
     
     [super viewDidLoad];
     
-    reflectionImage = [[CKReflectionImage alloc] initWithFrame:CGRectMake(96, 20, 128, 257)];
-    
     [reflectionImage setBackgroundColor:[UIColor clearColor]];
     
     [reflectionImage setPaddingToTopImage:2.0f];
@@ -38,20 +39,6 @@
     [reflectionImage setVisibleReflectionHeight:(CGRectGetWidth([reflectionImage frame]) / 4 * 3)];
     
     [reflectionImage setImage:[UIImage imageNamed:@"apple-logo.png"]];
-    
-    [[self view] addSubview:reflectionImage];
-    
-}
-
-#pragma mark - Instances initialization
-
-/*
- * Create and return an autoreleased CKViewController contructed from NIB file.
- */
-+ (CKViewController *)ckViewController {
-  
-    return [[CKViewController alloc] initWithNibName:NIB_FILE_NAME bundle:nil];
-    
 }
 
 @end

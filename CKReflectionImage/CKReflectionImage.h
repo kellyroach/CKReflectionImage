@@ -18,30 +18,12 @@
  *
  * @author <a href="mailto:ivan.palmergarcia@gmail.com">Ivan Palmer</a>
  */
-@interface CKReflectionImage : UIView {
-@private
-    
-    /**
-     * Image to draw.
-     */
-    UIImage *_image;
-    
-    /**
-     * Value of gradient start. This value is divided to height of image.
-     */
-    CGFloat _visibleReflectionHeight;
-    
-    /**
-     * Padding to top image.
-     */
-    CGFloat _paddingToTopImage;
-    
-}
+@interface CKReflectionImage : UIView
 
 /**
  * Provides read-write accesss to UIImage image.
  */
-@property (nonatomic, readwrite, retain) UIImage *image;
+@property (nonatomic, readwrite, strong) UIImage *image;
 
 /**
  * Provides read-write access to gradientStart value.
