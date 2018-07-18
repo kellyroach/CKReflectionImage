@@ -32,7 +32,7 @@
 		E07EBC38147586FE00A4C7EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E07EBC3A147586FE00A4C7EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E07EBC3C147586FE00A4C7EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E07EBC40147586FE00A4C7EA /* CKReflectionImage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CKReflectionImage-Info.plist"; sourceTree = "<group>"; };
+		E07EBC40147586FE00A4C7EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E07EBC44147586FE00A4C7EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E15D9AA220FFCEA300C518ED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,7 +163,7 @@
 		E07EBC3F147586FE00A4C7EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E07EBC40147586FE00A4C7EA /* CKReflectionImage-Info.plist */,
+				E07EBC40147586FE00A4C7EA /* Info.plist */,
 				E07EBC44147586FE00A4C7EA /* main.m */,
 			);
 			name = "Supporting Files";
@@ -338,7 +338,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "CKReflectionImage/CKReflectionImage-Info.plist";
+				INFOPLIST_FILE = CKReflectionImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cocoakit.${PRODUCT_NAME:rfc1034identifier}";
@@ -355,7 +355,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "CKReflectionImage/CKReflectionImage-Info.plist";
+				INFOPLIST_FILE = CKReflectionImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cocoakit.${PRODUCT_NAME:rfc1034identifier}";
