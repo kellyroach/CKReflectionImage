@@ -69,51 +69,6 @@
 			path = XIBs;
 			sourceTree = "<group>";
 		};
-		E04012D9147588160082B4DD /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				E04012DA147588160082B4DD /* Application */,
-				E04012DD147588160082B4DD /* GUI */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		E04012DA147588160082B4DD /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				E04012DB147588160082B4DD /* CKAppDelegate.h */,
-				E04012DC147588160082B4DD /* CKAppDelegate.m */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
-		E04012DD147588160082B4DD /* GUI */ = {
-			isa = PBXGroup;
-			children = (
-				E04012DE147588160082B4DD /* ViewControllers */,
-				E04012E1147588160082B4DD /* Views */,
-			);
-			path = GUI;
-			sourceTree = "<group>";
-		};
-		E04012DE147588160082B4DD /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				E04012DF147588160082B4DD /* CKViewController.h */,
-				E04012E0147588160082B4DD /* CKViewController.m */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		E04012E1147588160082B4DD /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E04012E814758BF80082B4DD /* CKReflectionImage.h */,
-				E04012E914758BF80082B4DD /* CKReflectionImage.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		E04012EB147592EC0082B4DD /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,19 +109,16 @@
 		E07EBC3E147586FE00A4C7EA /* CKReflectionImage */ = {
 			isa = PBXGroup;
 			children = (
-				E04012D9147588160082B4DD /* Classes */,
-				E07EBC3F147586FE00A4C7EA /* Supporting Files */,
-			);
-			path = CKReflectionImage;
-			sourceTree = "<group>";
-		};
-		E07EBC3F147586FE00A4C7EA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
+				E04012DB147588160082B4DD /* CKAppDelegate.h */,
+				E04012DC147588160082B4DD /* CKAppDelegate.m */,
+				E04012E814758BF80082B4DD /* CKReflectionImage.h */,
+				E04012E914758BF80082B4DD /* CKReflectionImage.m */,
+				E04012DF147588160082B4DD /* CKViewController.h */,
+				E04012E0147588160082B4DD /* CKViewController.m */,
 				E07EBC40147586FE00A4C7EA /* Info.plist */,
 				E07EBC44147586FE00A4C7EA /* main.m */,
 			);
-			name = "Supporting Files";
+			path = CKReflectionImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
