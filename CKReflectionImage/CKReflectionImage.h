@@ -18,21 +18,22 @@
  *
  * @author <a href="mailto:ivan.palmergarcia@gmail.com">Ivan Palmer</a>
  */
+IB_DESIGNABLE
 @interface CKReflectionImage : UIView
 
 /**
  * Provides read-write accesss to UIImage image.
  */
-@property (nonatomic,readwrite,strong) UIImage* image;
+@property (nonatomic,readwrite,strong) IBInspectable UIImage* image;
 
 /**
  * Provides read-write access to gradientStart value.
  */
-@property (nonatomic,readwrite,assign) CGFloat visibleReflectionHeight;
+@property (nonatomic,readwrite,assign) IBInspectable CGFloat visibleReflectionAspect;
 
 /**
  * Provides read-write access to padding to top image variable.
  */
-@property (nonatomic,readwrite,assign) CGFloat paddingToTopImage;
+@property (nonatomic,readwrite,assign) IBInspectable CGFloat paddingToTopImage;
 
 @end

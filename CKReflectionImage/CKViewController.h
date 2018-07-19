@@ -10,6 +10,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class CKReflectionImage;
+
 /**
  * The CKViewController extends that UIViewController class provides the fundamental view-management model for iOS applications.
  * The basic view controller class supports the presentation of an associated view, support for managing modal views, and support for
@@ -18,5 +20,10 @@
  *
  * @author <a href="mailto:ivan.palmergarcia@gmail.com">Ivan Palmer</a>
  */
+IB_DESIGNABLE
 @interface CKViewController : UIViewController
+/**
+ * A reflection image example.
+ */
+@property (nonatomic, weak) IBOutlet CKReflectionImage* reflectionImage;
 @end

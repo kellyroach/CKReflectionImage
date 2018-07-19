@@ -25,13 +25,15 @@
 }
 
 /**
- * Set current visibleReflectioHeight_ value to another.
+ * Set current isibleReflectionAspect value to another.
  *
- * @param visibleReflectioHeight Another value to visible reflectio height variable.
+ * @param visibleReflectionAspect Another value to visible reflection aspect variable.
+ * Aspect, most often between 0 and 1, determines height of the reflection relative
+ * to height of image.
  */
--(void)setVisibleReflectionHeight:(CGFloat)visibleReflectioHeight {
-    if (_visibleReflectionHeight!=visibleReflectioHeight) {
-        _visibleReflectionHeight=visibleReflectioHeight;
+-(void)setVisibleReflectionAspect:(CGFloat)visibleReflectionAspect {
+    if (_visibleReflectionAspect!=visibleReflectionAspect) {
+        _visibleReflectionAspect=visibleReflectionAspect;
     }
     [self setNeedsDisplay];
 }
@@ -98,8 +100,9 @@
             // Release colorSpace reference
             CGColorSpaceRelease(colorSpace);
             // Create the start and end points for the gradient vector (straight down).
-            CGPoint gradientStartPoint=CGPointMake(0,(CGRectGetHeight(frame)-_visibleReflectionHeight));
-            CGPoint gradientEndPoint=CGPointMake(0,((CGRectGetHeight(frame)*2)-_visibleReflectionHeight));
+            CGFloat visibleReflectionHeight = _visibleReflectionAspect*CGRectGetHeight(frame);
+            CGPoint gradientStartPoint=CGPointMake(0,(CGRectGetHeight(frame)-visibleReflectionHeight));
+            CGPoint gradientEndPoint=CGPointMake(0,((CGRectGetHeight(frame)*2)-visibleReflectionHeight));
             // Draw gradient into gradient context.
             CGContextDrawLinearGradient(gradientContext,grayScaleGradient,gradientStartPoint,gradientEndPoint,kCGGradientDrawsAfterEndLocation);
             // Release Gradient reference.
