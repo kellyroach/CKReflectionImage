@@ -11,12 +11,11 @@
 #import "CKViewController.h"
 #import "CKReflectionImage.h"
 
-@interface CKViewController () {
-    /**
-     * A reflection image example.
-     */
-    __weak IBOutlet CKReflectionImage* reflectionImage;
-}
+@interface CKViewController ()
+/**
+ * A reflection image example.
+ */
+@property (nonatomic, weak) IBOutlet CKReflectionImage* reflectionImage;
 @end
 
 @implementation CKViewController
@@ -28,11 +27,11 @@
  */
 -(void)viewDidLoad {
     [super viewDidLoad];
-    [reflectionImage setBackgroundColor:[UIColor clearColor]];
-    [reflectionImage setPaddingToTopImage:2.0f];
+    [_reflectionImage setBackgroundColor:[UIColor clearColor]];
+    [_reflectionImage setPaddingToTopImage:2.0f];
     // Hide 1/4 parts of image. show 3/4
-    [reflectionImage setVisibleReflectionHeight:(CGRectGetWidth([reflectionImage frame])/4*3)];
-    [reflectionImage setImage:[UIImage imageNamed:@"apple-logo.png"]];
+    [_reflectionImage setVisibleReflectionHeight:(CGRectGetWidth([_reflectionImage frame])/4*3)];
+    [_reflectionImage setImage:[UIImage imageNamed:@"apple-logo.png"]];
 }
 
 @end

@@ -36,7 +36,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="reflectionImage" destination="P6X-OQ-Zu4" id="3gw-8K-wJU"/>
+                        <outlet property="reflectionImage" destination="P6X-OQ-Zu4" id="wF2-Xk-dzR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
