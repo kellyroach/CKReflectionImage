@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E18D91DF21001437003A83F8 /* apple-logo.txt in Resources */ = {isa = PBXBuildFile; fileRef = E18D91DE21001436003A83F8 /* apple-logo.txt */; };
 		E1D8A0F420FFF6B5009E4357 /* CKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D8A0F320FFF6B5009E4357 /* CKAppDelegate.m */; };
 		E1D8A0F720FFF6B5009E4357 /* CKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D8A0F620FFF6B5009E4357 /* CKViewController.m */; };
 		E1D8A0FA20FFF6B5009E4357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D8A0F820FFF6B5009E4357 /* Main.storyboard */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E18D91DA210013FD003A83F8 /* CKReflectionImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CKReflectionImage.png; sourceTree = "<group>"; };
+		E18D91DC2100140E003A83F8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E18D91DE21001436003A83F8 /* apple-logo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "apple-logo.txt"; sourceTree = "<group>"; };
 		E1D8A0EF20FFF6B5009E4357 /* CKReflectionImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKReflectionImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D8A0F220FFF6B5009E4357 /* CKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKAppDelegate.h; sourceTree = "<group>"; };
 		E1D8A0F320FFF6B5009E4357 /* CKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKAppDelegate.m; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 		E1D8A0E620FFF6B5009E4357 = {
 			isa = PBXGroup;
 			children = (
+				E18D91DA210013FD003A83F8 /* CKReflectionImage.png */,
+				E18D91DC2100140E003A83F8 /* README.md */,
 				E1D8A0F120FFF6B5009E4357 /* CKReflectionImage */,
 				E1D8A0F020FFF6B5009E4357 /* Products */,
 			);
@@ -61,6 +67,7 @@
 		E1D8A0F120FFF6B5009E4357 /* CKReflectionImage */ = {
 			isa = PBXGroup;
 			children = (
+				E18D91DE21001436003A83F8 /* apple-logo.txt */,
 				E1D8A0FB20FFF6B6009E4357 /* Assets.xcassets */,
 				E1D8A0F220FFF6B5009E4357 /* CKAppDelegate.h */,
 				E1D8A0F320FFF6B5009E4357 /* CKAppDelegate.m */,
@@ -133,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18D91DF21001437003A83F8 /* apple-logo.txt in Resources */,
 				E1D8A0FF20FFF6B6009E4357 /* LaunchScreen.storyboard in Resources */,
 				E1D8A0FC20FFF6B6009E4357 /* Assets.xcassets in Resources */,
 				E1D8A0FA20FFF6B5009E4357 /* Main.storyboard in Resources */,
