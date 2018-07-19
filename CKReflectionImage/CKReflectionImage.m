@@ -12,6 +12,43 @@
 
 @implementation CKReflectionImage
 
+#pragma mark Property setters
+
+/**
+ * Set current image to another image.
+ *
+ * @param image Another image to set.
+ */
+-(void)setImage:(UIImage*)image {
+    _image=image;
+    [self setNeedsDisplay];
+}
+
+/**
+ * Set current visibleReflectioHeight_ value to another.
+ *
+ * @param visibleReflectioHeight Another value to visible reflectio height variable.
+ */
+-(void)setVisibleReflectionHeight:(CGFloat)visibleReflectioHeight {
+    if (_visibleReflectionHeight!=visibleReflectioHeight) {
+        _visibleReflectionHeight=visibleReflectioHeight;
+    }
+    [self setNeedsDisplay];
+}
+
+/**
+ * Set current paddingToTopImage variable to another value.
+ *
+ * @param paddingToTopImage Another value to padding to top image.
+ */
+-(void)setPaddingToTopImage:(CGFloat)paddingToTopImage {
+    if (_paddingToTopImage!=paddingToTopImage) {
+        _paddingToTopImage=paddingToTopImage;
+    }
+    [self setNeedsDisplay];
+}
+
+
 #pragma mark Draw methods
 
 /**
@@ -123,41 +160,4 @@
         CGContextRestoreGState(context);
     }
 }
-
-#pragma mark Property setters
-
-/**
- * Set current image to another image.
- *
- * @param image Another image to set.
- */
--(void)setImage:(UIImage*)image {
-    _image=image;
-    [self setNeedsDisplay];
-}
-
-/**
- * Set current visibleReflectioHeight_ value to another.
- *
- * @param visibleReflectioHeight Another value to visible reflectio height variable.
- */
--(void)setVisibleReflectionHeight:(CGFloat)visibleReflectioHeight {
-    if (_visibleReflectionHeight!=visibleReflectioHeight) {
-        _visibleReflectionHeight=visibleReflectioHeight;
-    }
-    [self setNeedsDisplay];
-}
-
-/**
- * Set current paddingToTopImage variable to another value.
- *
- * @param paddingToTopImage Another value to padding to top image.
- */
--(void)setPaddingToTopImage:(CGFloat)paddingToTopImage {
-    if (_paddingToTopImage!=paddingToTopImage) {
-        _paddingToTopImage=paddingToTopImage;
-    }
-    [self setNeedsDisplay];
-}
-
 @end
